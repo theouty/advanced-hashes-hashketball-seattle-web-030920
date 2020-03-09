@@ -35,42 +35,74 @@ end
 
 
 def long_name_steals_a_ton?
+<<<<<<< HEAD
   longest_name = player_with_longest_name
 
   player_name_steals_high = ""
   
   steals_high = 0 
+=======
+ long_name = player_with long_name
+
+  player_name_with_most_steals = ""
+  most_steals = 0 
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
 
   game_hash.map {|team, team_information| 
     team_information.map{|sing, sing_data|
       if sing == :players 
         sing_data.each {|player_hash|
+<<<<<<< HEAD
           if player_hash[:steals] > steals_high
             steals_high = player_hash[:steals]
             player_name_steals_high = player_hash[:player_name]
+=======
+          if player_hash[:steals] > most_steals
+            most_steals = player_hash[:steals]
+            player_name_with_most_steals = player_hash[:player_name]
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
           end
         }
       end 
     }
   }
+<<<<<<< HEAD
   longest_name == player_name_steals_high
 end 
 
 def player_with_longest_name 
   longest_name = "" 
+=======
+ long_name == player_name_with_most_steals
+end 
+
+
+def player_with long_name 
+ long_name = "" 
+
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
 
   game_hash.map {|team, team_information|
     team_information.map {|sing, sing_data|
       if sing == :players 
         sing_data.each {|player_hash|
+<<<<<<< HEAD
           if player_hash[:player_name].length > longest_name.length 
             longest_name = player_hash[:player_name] 
+=======
+          if player_hash[:player_name].length > long_name.length 
+           long_name = player_hash[:player_name] 
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
           end 
         }
       end 
     }
   }
+<<<<<<< HEAD
   longest_name
+=======
+ long_name
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
 end 
 
 
@@ -124,9 +156,13 @@ def num_points_scored(player_name)
   points_scored = 0 
 
   game_hash.map {|team, team_information|
+<<<<<<< HEAD
   
     team_information.map {|team_sings, data|
     
+=======
+    team_information.map {|team_sings, data|
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
       if team_sings == :players
         data.select {|player_array|
           if player_array[:player_name] == player_name
@@ -141,6 +177,11 @@ def num_points_scored(player_name)
 end 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
 def shoe_size(player_name)
   game_hash.map {|team, team_information|
     team_information.map {|team_sings, data|
@@ -216,7 +257,10 @@ def big_shoe_rebounds
 
   game_hash.map {|team, team_information|
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fc0febf51e9d6341e5c62071b1a27065f5c94f9
     team_information.map {|sing, data|
       if sing == :players 
         data.map {|player_stats|
